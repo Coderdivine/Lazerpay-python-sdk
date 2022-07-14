@@ -199,13 +199,13 @@ class LazerPayFinance():
         return response.json()
     def getRate(self):
         url = 'https://api.lazerpay.engineering/api/v1/rate'
-        # requesting = requests.Session()
-        # requesting.headers.update({'Authentication':self.publicKey})
-        headers = {
-            'Content-type':'application/json',
-            'Authorization':self.publicKey
-        }
-        response = requests.get(url,headers=headers)
+        requesting = requests.Session()
+        requesting.headers.update({'Authentication':self.publicKey})
+        # headers = {
+        #     'Content-type':'application/json',
+        #     'Authorization':self.publicKey
+        # }
+        response = requesting.get(url)
         return response.json()
 print('___tesing___')
 lazerpay = LazerPayFinance('sk_test_Fh4xj28OXmTO3Ou08zu9xl9h4nslTysGugQI0l3s6J2bdT5T1I','pk_test_0bE5tKpLON8OGVdmjqAxL0woAwCEth65Lkg9hdxr9jvvCiiKv4',True,'Binance Smart Chain')
