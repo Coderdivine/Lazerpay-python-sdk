@@ -114,7 +114,7 @@ class LazerPayFinance():
         # requesting.headers.update({'Authorization':self.secretKey})
         headers = {
             'Content-type':'application/json',
-            'x-api-key':self.secretKey
+            'Authorization':self.secretKey
         }
         response = requests.get(url,headers=headers)
         return response.json()
@@ -124,18 +124,22 @@ class LazerPayFinance():
         # requesting.headers.update({'Authorization':self.secretKey})
         headers = {
             'Content-type':'application/json',
-            'x-api-key':self.secretKey
+            'Authorization':self.secretKey
         }
         response = requests.get(url,headers=headers)
         return response.json()
     def updateLink(self,reference,params):
         url = 'https://api.lazerpay.engineering/api/v1/payment-links/'+reference
-        requesting = requests.Session()
-        requesting.headers.update({'Authorization':self.secretKey})
+        # requesting = requests.Session()
+        # requesting.headers.update({'Authorization':self.secretKey})
+        headers = {
+            'Content-type':'application/json',
+            'Authorization':self.secretKey
+        }
         # params = {
         #     'status':'active',
         # }
-        response = requesting.put(url,params)
+        response = requests.put(url,params=params,headers=headers)
         return response.json()
     def transferCrypto(self,params):
         url = 'https://api.lazerpay.engineering/api/v1/transfer'
@@ -149,9 +153,13 @@ class LazerPayFinance():
         #     },
         #     'blockchain':'Binance Smart Chain'
         # }
-        requesting = requests.Session()
-        requesting.headers.update({'Authorization':self.secretKey})
-        response = requesting.post(url,params)
+        # requesting = requests.Session()
+        # requesting.headers.update({'Authorization':self.secretKey})
+        headers = {
+            'Content-type':'application/json',
+            'Authorization':self.secretKey
+        }
+        response = requests.post(url,params=params,headers=headers)
         return response.json()
     def swapCrypto(self,params):
         url = 'https://api.lazerpay.engineering/api/v1/swap/crypto'
@@ -165,9 +173,13 @@ class LazerPayFinance():
         #     },
         #     'blockchain':'Binance Smart Chain'
         # }
-        requesting = requests.Session()
-        requesting.headers.update({'Authorization':self.secretKey})
-        response = requesting.post(url,params)
+        # requesting = requests.Session()
+        # requesting.headers.update({'Authorization':self.secretKey})
+        headers = {
+            'Content-type':'application/json',
+            'Authorization':self.secretKey
+        }
+        response = requests.post(url,params=params,headers=headers)
         return response.json()
     def swapCharge(self,params):
         url = 'https://api.lazerpay.engineering/api/v1/swap/crypto/amount-out'
