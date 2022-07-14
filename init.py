@@ -203,7 +203,7 @@ class LazerPayFinance():
         # requesting.headers.update({'Authentication':self.publicKey})
         headers = {
             'Content-type':'application/json',
-            'authorization':self.publicKey
+            'Authorization':self.publicKey
         }
         response = requests.get(url,headers=headers)
         return response.json()
@@ -230,9 +230,9 @@ p_1 = {
 #getFiats = lazerpay.getFiats()
 #print("getFiats =>")
 #print(getFiats)
-getCoins = lazerpay.getCoins()
-print("getCoins =>")
-print(getCoins)
+#getCoins = lazerpay.getCoins()
+#print("getCoins =>")
+#print(getCoins)
 p_2 = {
             'title':'hello',
             'description':'this is hello',
