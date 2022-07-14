@@ -85,15 +85,24 @@ class LazerPayFinance():
         #     'currency':'USD',
         #     'redirect_url':'https://docs.lazerpay.finance'
         # }
-        requesting = requests.Session()
-        requesting.headers.update({'Authorization':self.secretKey})
-        response = requesting.post(url,params)
+        # requesting = requests.Session()
+        # requesting.headers.update({'Authorization':self.secretKey})
+        headers = {
+            'Content-type':'application/json',
+            'Authorization':self.secretKey
+        }
+        response = requests.post(url,json=params,headers=headers)
         return response.json()
     def verifyPayment(self,reference_address):
         url = 'https://api.lazerpay.engineering/api/v1/transaction/verify/'+reference_address
-        requesting = requests.Session()
-        requesting.headers.update({'x-api-key':self.publicKey})
-        response = requesting.get(url)
+        # requesting = requests.Session()
+        # requesting.headers.update({'x-api-key':self.publicKey})
+        print(url)
+        headers = {
+            'Content-type':'application/json',
+            'x-api-key':self.publicKey
+        }
+        response = requests.get(url,headers=headers)
         return response.json()
     def createReferenceString(self,length):  
         # call random.choices() string module to find the string in Uppercase + numeric data.  
