@@ -50,9 +50,13 @@ class LazerPayFinance():
         #     'amount':10,
         #     'accept_partial_payment':self.Partial
         # }
-        requesting = requests.Session()
-        requesting.headers.update({'x-api-key':self.publicKey})
-        response = requesting.post(url,params)
+        #requesting = requests.Session()
+        headers = {
+            'Content-type':'application/json',
+            'x-api-key':self.publicKey
+        }
+        #requesting.headers.update({'x-api-key':self.publicKey})
+        response = requests.post(url,json=params,headers=headers)
         return response.json()
     def getFiats(self):
         #The amount field should be in your fiat currency. 
