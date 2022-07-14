@@ -139,7 +139,7 @@ class LazerPayFinance():
         # params = {
         #     'status':'active',
         # }
-        response = requests.put(url,params=params,headers=headers)
+        response = requests.put(url,json=params,headers=headers)
         return response.json()
     def transferCrypto(self,params):
         url = 'https://api.lazerpay.engineering/api/v1/transfer'
@@ -159,7 +159,7 @@ class LazerPayFinance():
             'Content-type':'application/json',
             'Authorization':self.secretKey
         }
-        response = requests.post(url,params=params,headers=headers)
+        response = requests.post(url,json=params,headers=headers)
         return response.json()
     def swapCrypto(self,params):
         url = 'https://api.lazerpay.engineering/api/v1/swap/crypto'
@@ -179,7 +179,7 @@ class LazerPayFinance():
             'Content-type':'application/json',
             'Authorization':self.secretKey
         }
-        response = requests.post(url,params=params,headers=headers)
+        response = requests.post(url,json=params,headers=headers)
         return response.json()
     def swapCharge(self,params):
         url = 'https://api.lazerpay.engineering/api/v1/swap/crypto/amount-out'
@@ -195,7 +195,7 @@ class LazerPayFinance():
             'Content-type':'application/json',
             'Authorization':self.secretKey
         }
-        response = requests.post(url,params=params,headers=headers)
+        response = requests.post(url,json=params,headers=headers)
         return response.json()
     def getRate(self):
         url = 'https://api.lazerpay.engineering/api/v1/rate'
