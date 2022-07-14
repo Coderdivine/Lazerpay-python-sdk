@@ -22,7 +22,7 @@ class LazerPayFinance():
             }
         #requesting.headers.update({'Authorization':self.secretKey})
         response = requests.get(url,headers=headers)
-        print(response.headers)
+        print("response.headers")
         print(response.content)
         print(response.status_code)
         return response.json()
