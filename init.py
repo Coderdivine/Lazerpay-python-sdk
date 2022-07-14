@@ -68,9 +68,13 @@ class LazerPayFinance():
         return response
     def getCoins(self):
         url = 'https://api.lazerpay.engineering/api/v1/coins'
-        requesting = requests.Session()
-        requesting.headers.update({'x-api-key':self.publicKey})
-        response = requesting.get(url)
+        headers = {
+            'Content-type':'application/json',
+            'x-api-key':self.publicKey
+        }
+        # requesting = requests.Session()
+        # requesting.headers.update({'x-api-key':self.publicKey})
+        response = requests.get(url,headers=headers)
         return response.json()
     def createLink(self,params):
         url = 'https://api.lazerpay.engineering/api/v1/payment-links'
