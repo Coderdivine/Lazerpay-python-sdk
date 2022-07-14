@@ -189,9 +189,13 @@ class LazerPayFinance():
         #     'toCoin':'USDT',
         #     'blockchain':'Binance Smart Chain'
         # }
-        requesting = requests.Session()
-        requesting.headers.update({'Authorization':self.secretKey})
-        response = requesting.post(url,params)
+        # requesting = requests.Session()
+        # requesting.headers.update({'Authorization':self.secretKey})
+        headers = {
+            'Content-type':'application/json',
+            'Authorization':self.secretKey
+        }
+        response = requests.post(url,params=params,headers=headers)
         return response.json()
     def getRate(self):
         url = 'https://api.lazerpay.engineering/api/v1/rate'
