@@ -243,19 +243,19 @@ p_2 = {
 createLink = lazerpay.createLink(p_2)
 print("createLink =>")
 print(createLink)
-verifyPayment = lazerpay.verifyPayment("ref")
+verifyPayment = lazerpay.verifyPayment(ref)
 print("verifyPayment =>")
 print(verifyPayment)
 previousLink = lazerpay.previousLink()
 print("previousLink =>")
 print(previousLink)
-FetchSingleLink = lazerpay.FetchSingleLink("ref")
+FetchSingleLink = lazerpay.FetchSingleLink(ref)
 print("FetchSingleLink =>")
 print(FetchSingleLink)
 p_3 = {
             'status':'active',
         }
-updateLink = lazerpay.updateLink("ref",p_3)
+updateLink = lazerpay.updateLink(ref,p_3)
 print("updateLink =>")
 print(updateLink)
 p_4 = {
