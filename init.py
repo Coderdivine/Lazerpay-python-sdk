@@ -110,15 +110,23 @@ class LazerPayFinance():
         return str(ran)
     def previousLink(self):
         url = 'https://api.lazerpay.engineering/api/v1/payment-links'
-        requesting = requests.Session()
-        requesting.headers.update({'Authorization':self.secretKey})
-        response = requesting.get(url)
+        # requesting = requests.Session()
+        # requesting.headers.update({'Authorization':self.secretKey})
+        headers = {
+            'Content-type':'application/json',
+            'x-api-key':self.secretKey
+        }
+        response = requests.get(url,headers=headers)
         return response.json()
     def FetchSingleLink(self,reference):
         url = 'https://api.lazerpay.engineering/api/v1/payment-links/'+reference
-        requesting = requests.Session()
-        requesting.headers.update({'Authorization':self.secretKey})
-        response = requesting.get(url)
+        # requesting = requests.Session()
+        # requesting.headers.update({'Authorization':self.secretKey})
+        headers = {
+            'Content-type':'application/json',
+            'x-api-key':self.secretKey
+        }
+        response = requests.get(url,headers=headers)
         return response.json()
     def updateLink(self,reference,params):
         url = 'https://api.lazerpay.engineering/api/v1/payment-links/'+reference
