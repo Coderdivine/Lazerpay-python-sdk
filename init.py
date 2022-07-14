@@ -14,11 +14,14 @@ class LazerPayFinance():
         self.Partial = Partial
     def walletBalance(self,coin):
         #The coin balance you want to get, eg USDT, DAI, BUSD, USDC
-        url = 'https://api.lazerpay.engineering/api/v1/wallet/balance?coin=USDT'
+        url = 'https://api.lazerpay.engineering/api/v1/wallet/balance/?coin=USDC'
         #requesting = requests.Session()
-        header = {'Authorization':self.secretKey}
+        headers = {
+            'Content-type':'application/json',
+            'Authorization':self.secretKey
+            }
         #requesting.headers.update({'Authorization':self.secretKey})
-        response = requests.get(url,headers=header)
+        response = requests.get(url,headers=headers)
         return response.json()
     def Authentication(self,method,url,params,type):
         requesting = requests.Session()
