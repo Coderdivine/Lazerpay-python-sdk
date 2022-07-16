@@ -17,3 +17,15 @@ class WebProvider():
             return web3.toWei(balance,'ether')
         else:
             return balance
+    def LatestBlock(self):
+        block = web3.eth.get_block('latest')
+        return block
+    def getGasPrice(self):
+        price = web3.eth.gas_price
+        return price
+    def getAccounts(self):
+        acc = web3.eth.accounts
+        return acc
+    def getChainId():
+        chain =  web3.eth.chain_id
+        return chain
