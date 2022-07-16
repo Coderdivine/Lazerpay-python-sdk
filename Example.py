@@ -94,4 +94,5 @@ print(getRate)
 createRandomAccount = lazerpay.createRandomAccount()
 print('createRandomAccount=>')
 print(createRandomAccount)
+getBalance = lazerpay.getBalance("0xD275Da57B35089a51A3E4659AcDF13311Ebd6183","to")#toWei. Use from to convert from wei to ether
 print("__DONE__")
