@@ -18,7 +18,7 @@ class LazerPayFinance():
         #requesting = requests.Session()
         headers = {
             'Content-type':'application/json',
-            'Authorization':self.secretKey
+            'Authorization':'Bearer '+self.secretKey
             }
         #requesting.headers.update({'Authorization':self.secretKey})
         response = requests.get(url,headers=headers)
@@ -29,7 +29,7 @@ class LazerPayFinance():
         if type == "public":
            requesting.headers.update({'x-api-key':self.publicKey})
         else:
-           requesting.headers.update({'x-api-key':self.secretKey})
+           requesting.headers.update({'x-api-key':'Bearer '+self.secretKey})
         if method == "POST":
             r = requesting.post(url,params)
            # return r.json()
@@ -89,7 +89,7 @@ class LazerPayFinance():
         # requesting.headers.update({'Authorization':self.secretKey})
         headers = {
             'Content-type':'application/json',
-            'authorization':self.secretKey
+            'authorization':'Bearer '+self.secretKey
         }
         response = requests.post(url,json=params,headers=headers)
         return response.json()
@@ -114,7 +114,7 @@ class LazerPayFinance():
         # requesting.headers.update({'Authorization':self.secretKey})
         headers = {
             'Content-type':'application/json',
-            'Authorization':self.secretKey
+            'Authorization':'Bearer '+self.secretKey
         }
         response = requests.get(url,headers=headers)
         return response.json()
@@ -124,7 +124,7 @@ class LazerPayFinance():
         # requesting.headers.update({'Authorization':self.secretKey})
         headers = {
             'Content-type':'application/json',
-            'Authorization':self.secretKey
+            'Authorization':'Bearer '+self.secretKey
         }
         response = requests.get(url,headers=headers)
         return response.json()
@@ -134,7 +134,7 @@ class LazerPayFinance():
         # requesting.headers.update({'Authorization':self.secretKey})
         headers = {
             'Content-type':'application/json',
-            'Authorization':self.secretKey
+            'Authorization':'Bearer '+self.secretKey
         }
         # params = {
         #     'status':'active',
@@ -157,7 +157,7 @@ class LazerPayFinance():
         # requesting.headers.update({'Authorization':self.secretKey})
         headers = {
             'Content-type':'application/json',
-            'Authorization':self.secretKey
+            'Authorization':'Bearer '+self.secretKey
         }
         response = requests.post(url,json=params,headers=headers)
         return response.json()
@@ -191,7 +191,7 @@ class LazerPayFinance():
         # requesting.headers.update({'Authorization':self.secretKey})
         headers = {
             #'Content-type':'application/json',
-            'Authorization':self.secretKey
+            'Authorization':'Bearer '+self.secretKey
         }
         response = requests.post(url,json=params,headers=headers)
         return response.json()
