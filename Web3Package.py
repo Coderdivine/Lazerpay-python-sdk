@@ -2,7 +2,7 @@ from web3 import Web3
 web3 = Web3(Web3.HTTPProvider("https://bsc-dataseed4.binance.org"))
 print(web3.isConnected())
 #no params
-class WebProvider():
+class WebProvider:
     def __init__(self):
         pass
     def BlockNumber(self):
@@ -25,6 +25,6 @@ class WebProvider():
     def getAccounts(self):
         acc = web3.eth.accounts
         return acc
-    def getChainId():
+    def getChainId(self):
         chain =  web3.eth.chain_id
         return chain
