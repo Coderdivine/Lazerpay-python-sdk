@@ -213,7 +213,7 @@ class LazerPayFinance():
     def getBalance(self,address,type):
         bal = WebProviders.getBalance(address,type)
         return bal
-    def createAccount():
+    def createAccount(self):
         acc = WebProviders.createAccount()
         return acc
 print('___tesing___')
