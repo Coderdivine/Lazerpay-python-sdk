@@ -6,7 +6,7 @@ import random # define the random module
 #0x337610d27c682E347C9cD60BD4b3b107C9d34dDd
 #0xD275Da57B35089a51A3E4659AcDF13311Ebd6183
 from Web3Package import WebProvider
-WebProvider = WebProvider()
+WebProviders = WebProvider()
 class LazerPayFinance():
     def __init__(self,secretKey,publicKey,Partial,chain):
         self.chain = chain
@@ -210,13 +210,10 @@ class LazerPayFinance():
         response = requesting.get(url)
         return response.json()
     def createRandomAccount(self):
-        acc = WebProvider.getAccounts()
+        acc = WebProviders.getAccounts()
         return acc
-    def getAccountBlock(self):
-        WebProviders = WebProvider.BlockNumber()
-        return WebProviders
     def getBalance(self,address,type):
-        bal = WebProvider.getAccountBlock(address,type)
+        bal = WebProviders.getBalance(address,type)
         return bal
 print('___tesing___')
 #py -m pip install setuptools twine
