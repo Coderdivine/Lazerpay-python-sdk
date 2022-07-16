@@ -208,6 +208,9 @@ class LazerPayFinance():
         response = requesting.get(url)
         return response.json()
 print('___tesing___')
+#py -m pip install setuptools twine
+#py setup.py sdist
+#twine upload --repository-url https://upload.pypi.org/legacy/ dist/*
 lazerpay = LazerPayFinance('sk_test_Fh4xj28OXmTO3Ou08zu9xl9h4nslTysGugQI0l3s6J2bdT5T1I','pk_test_0bE5tKpLON8OGVdmjqAxL0woAwCEth65Lkg9hdxr9jvvCiiKv4',True,'Binance Smart Chain')
 ref = lazerpay.createReferenceString(20)
 print("ref => " + str(ref))
