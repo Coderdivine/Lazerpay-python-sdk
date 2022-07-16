@@ -173,11 +173,9 @@ class LazerPayFinance():
         #     },
         #     'blockchain':'Binance Smart Chain'
         # }
-        # requesting = requests.Session()
-        # requesting.headers.update({'Authorization':self.secretKey})
         headers = {
             'Content-type':'application/json',
-            'Authorization':self.secretKey
+            'Authorization':'Bearer '+self.secretKey
         }
         response = requests.post(url,json=params,headers=headers)
         return response.json()
@@ -192,7 +190,7 @@ class LazerPayFinance():
         # requesting = requests.Session()
         # requesting.headers.update({'Authorization':self.secretKey})
         headers = {
-            'Content-type':'application/json',
+            #'Content-type':'application/json',
             'Authorization':self.secretKey
         }
         response = requests.post(url,json=params,headers=headers)
