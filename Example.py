@@ -29,7 +29,7 @@ p_2 = {
         'description':'Description of payment',
         'amount':450,
         'type:':'standard',
-        'logo':'this is just a logo link',
+        'logo':'https://.www.thisisjustalogo.com',
         'currency':'NGN',
         'redirect_url':'https:hesichimdi.xyz'
         }
