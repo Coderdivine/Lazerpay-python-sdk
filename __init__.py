@@ -209,7 +209,11 @@ class LazerPayFinance():
         response = requesting.get(url)
         return response.json()
     def createRandomAccount():
-        Web3Package.getAccounts()
+        acc = Web3Package.getAccounts()
+        return acc
+    def getAccountBlock():
+        Web3Packages = Web3Package.BlockNumber()
+        return Web3Packages
 print('___tesing___')
 #py -m pip install setuptools twine
 #py setup.py sdist
