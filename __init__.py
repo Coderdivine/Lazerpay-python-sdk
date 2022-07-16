@@ -198,14 +198,14 @@ class LazerPayFinance():
         response = requests.post(url,json=params,headers=headers)
         return response.json()
     def getRate(self):
-        url = 'https://api.lazerpay.engineering/api/v1/rate'
-        requesting = requests.Session()
-        requesting.headers.update({'Authentication':self.publicKey})
-        # headers = {
-        #     'Content-type':'application/json',
-        #     'Authorization':self.publicKey
-        # }
-        response = requesting.get(url)
+        url = 'https://api.lazerpay.engineering/api/v1/rate?coin=USDT&currency=NGN'
+        # requesting = requests.Session()
+        # requesting.headers.update({'x-api-key':self.publicKey})
+        headers = {
+            'Content-type':'application/json',
+            'x-api-key':self.publicKey
+        }
+        response = requests.get(url,headers=headers)
         return response.json()
     def createRandomAccount(self):
         acc = WebProviders.getAccounts()
