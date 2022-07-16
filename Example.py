@@ -54,7 +54,7 @@ print("updateLink =>")
 print(updateLink)
 p_4 = {
             'reference':'92992-82u2892-000',
-            'amount':'10',
+            'amount':10.00,
             'recipient':'0xf000...',
             'coin':'USDT',
             'metadata':{
@@ -67,7 +67,7 @@ print("transferCrypto =>")
 print(transferCrypto)
 p_5 = {
             'reference':'just a string',
-            'amount':'10',
+            'amount':10.00,
             'fromCoin':'USDC',
             'toCoin':'USDT',
             'metadata':{
@@ -80,7 +80,7 @@ print("swapCrypto = >")
 print(swapCrypto)
 p_6 = {
             'reference':'just a string',
-            'amount':'10',
+            'amount':10.00,
             'fromCoin':'USDC',
             'toCoin':'USDT',
             'metadata':{
