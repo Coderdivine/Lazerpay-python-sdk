@@ -88,7 +88,7 @@ p_6 = {
 swapCharge = lazerpay.swapCharge(p_6)
 print("swapCharge =>")
 print(swapCharge)
-getRate = lazerpay.getRate()
+getRate = lazerpay.getRate('USDT','NGN')
 print("getRate =>")
 print(getRate)
 createRandomAccount = lazerpay.createRandomAccount()
