@@ -32,7 +32,7 @@ class LazerPayFinance():
            requesting.headers.update({'x-api-key':self.secretKey})
         if method == "POST":
             r = requesting.post(url,params)
-            return r.json()
+           # return r.json()
         else:
             r = requesting.get(url)
             return r.json()
@@ -83,7 +83,7 @@ class LazerPayFinance():
         #     'description':'this is hello',
         #     'type':'standard',
         #     'currency':'USD',
-        #     'redirect_url':'https://docs.lazerpay.finance'
+        #  #   'redirect_url':'https://docs.lazerpay.finance'
         # }
         # requesting = requests.Session()
         # requesting.headers.update({'Authorization':self.secretKey})
