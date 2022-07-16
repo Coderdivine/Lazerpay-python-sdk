@@ -197,8 +197,9 @@ class LazerPayFinance():
         }
         response = requests.post(url,json=params,headers=headers)
         return response.json()
-    def getRate(self):
-        url = 'https://api.lazerpay.engineering/api/v1/rate?coin=USDT&currency=NGN'
+    def getRate(self,coin,currency):
+        url = "https://api.lazerpay.engineering/api/v1/rate?coin={}&currency={}".format(coin,currency)
+        print(url)
         # requesting = requests.Session()
         # requesting.headers.update({'x-api-key':self.publicKey})
         headers = {
