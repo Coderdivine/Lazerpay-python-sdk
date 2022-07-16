@@ -52,10 +52,11 @@ p_3 = {
 updateLink = lazerpay.updateLink(ref,p_3)
 print("updateLink =>")
 print(updateLink)
+#done
 p_4 = {
-            'reference':'92992-82u2892-000',
+            'reference':'92992-82u2892-0800',
             'amount':10.00,
-            'recipient':'0xf000...',
+            'recipient':'0xD275Da57B35089a51A3E4659AcDF13311Ebd6183',
             'coin':'USDT',
             'metadata':{
                 'type':'Crypto transfer'
