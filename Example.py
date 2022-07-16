@@ -31,7 +31,7 @@ p_2 = {
         'type:':'standard',
         'logo':'https://.www.thisisjustalogo.com',
         'currency':'NGN',
-        'redirect_url':'https:hesichimdi.xyz'
+        'redirect_url':'https://hesichimdi.xyz'
         }
 createLink = lazerpay.createLink(p_2)
 print("createLink =>")
