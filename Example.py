@@ -35,8 +35,8 @@ p_2 = {
         }
 createLink =  lazerpay.createLink(p_2)
 print("createLink =>")
-print(createLink)
-print(createLink['data']['reference'])
+# print(createLink)
+ref = createLink['data']['reference']
 #verifyPayment = lazerpay.verifyPayment(ref)
 #print("verifyPayment =>")
 #print(verifyPayment)
