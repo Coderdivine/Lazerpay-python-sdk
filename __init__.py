@@ -79,11 +79,13 @@ class LazerPayFinance():
     def createLink(self,params):
         url = 'https://api.lazerpay.engineering/api/v1/payment-links'
         # params = {
-        #     'title':'hello',
-        #     'description':'this is hello',
-        #     'type':'standard',
-        #     'currency':'USD',
-        #  #   'redirect_url':'https://docs.lazerpay.finance'
+        # 'title':'Hello this a new link',
+        # 'description':'Description of payment',
+        # 'amount':450,
+        # 'type:':'standard',
+        # 'logo':'this is just a logo link',
+        # 'currency':'NGN',
+        # 'redirect_url':'https:hesichimdi.xyz'
         # }
         # requesting = requests.Session()
         # requesting.headers.update({'Authorization':self.secretKey})
