@@ -1,3 +1,4 @@
+from os import access
 from web3 import Web3
 web3 = Web3(Web3.HTTPProvider("https://bsc-dataseed4.binance.org"))
 print(web3.isConnected())
@@ -28,3 +29,6 @@ class WebProvider:
     def getChainId(self):
         chain =  web3.eth.chain_id
         return chain
+    def createAccount():
+        acc = web3.eth.accounts.create()
+        return acc

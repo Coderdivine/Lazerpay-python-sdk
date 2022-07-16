@@ -1,6 +1,4 @@
 import requests
-import numpy as np
-import pandas as pd
 import string    
 import random # define the random module
 #0x337610d27c682E347C9cD60BD4b3b107C9d34dDd
@@ -215,6 +213,9 @@ class LazerPayFinance():
     def getBalance(self,address,type):
         bal = WebProviders.getBalance(address,type)
         return bal
+    def createAccount():
+        acc = WebProviders.createAccount()
+        return acc
 print('___tesing___')
 #py -m pip install setuptools twine
 #py setup.py sdist
