@@ -217,8 +217,8 @@ class LazerPayFinance():
         acc = WebProviders.createAccount()
         return acc
 print('___tesing___')
-#py -m pip install setuptools twine
-#py setup.py sdist
-#twine upload --repository-url https://upload.pypi.org/legacy/ dist/*
+# py -m pip install setuptools twine
+# py setup.py sdist
+# twine upload --repository-url https://upload.pypi.org/legacy/ dist/*
 print('__DONE___')
 
