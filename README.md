@@ -1,3 +1,79 @@
+# LazerPay Python sdk
+
+This python sdk helps devlopers interact with LazerPay api in a very simple and easy way. It also have cool features to use for testing.
+
+## Installation
+
+Use the package manager [pip](https://pip.pypa.io/en/stable/) to install LazerPayFinance.
+
+```bash
+pip install LazerPayFinance
+```
+
+If the approach is not working try this
+
+```bash
+py -m pip instal LazerPayFinance
+```
+
+## Usage
+
+firstly you will nedd to import and call the function like the following example given below
+
+```python
+import LazerPayFinance
+lazerpay = LazerPayFinance('sk_test_Fh4xj28OXmTO3Ou08zu9xl9h4nslTysGugQI0l3s6J2bdT5T1I','pk_test_0bE5tKpLON8OGVdmjqAxL0woAwCEth65Lkg9hdxr9jvvCiiKv4',True,'Binance Smart Chain')
+```
+
+You would need both your public key and secret key to call this function.
+
+### How create a random reference string
+
+The example below shows you how to create random reference string.
+
+```python
+ref = lazerpay.createReferenceString(20)
+```
+
+this function takes a single parameter which is the length of the string and also returns a random string of the length specified.
+
+### Wallet Balance
+
+To check a wallet balance a you need to do is call this function below
+
+```python
+walletbalance = lazerpay.walletBalance('USDT')
+print("wallet_balance =>")
+print(walletbalance)
+```
+
+This takes only one argument which is the name of the coin you wish to check.
+
+#### Note: Lazerpay only support limited amount of token. To get the list of token supported by LazerPay you will need to call this function.
+
+```python
+getCoins = lazerpay.getCoins()
+print("getCoins =>")
+print(getCoins)
+```
+
+This would return the list of token supported bt lazerpay.
+
+## Fiats
+
+To get the list of supported fiat simply call this function.
+
+```python
+getFiats = lazerpay.getFiats()
+print("getFiats =>")
+print(getFiats)
+```
+
+This would return the list of supported fiats.
+
+Here's a quick example on how to use LazerPayFinance using Python
+
+```python
 import LazerPayFinance
 lazerpay = LazerPayFinance('sk_test_Fh4xj28OXmTO3Ou08zu9xl9h4nslTysGugQI0l3s6J2bdT5T1I','pk_test_0bE5tKpLON8OGVdmjqAxL0woAwCEth65Lkg9hdxr9jvvCiiKv4',True,'Binance Smart Chain')
 ref = lazerpay.createReferenceString(20)
@@ -102,3 +178,15 @@ getBalance = lazerpay.getBalance("0xD275Da57B35089a51A3E4659AcDF13311Ebd6183","t
 print("getBalance =>")
 print(getBalance)
 print("__DONE__")
+
+```
+
+## Contributing
+
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+
+Please make sure to update tests as appropriate.
+
+## License
+
+[MIT](https://choosealicense.com/licenses/mit/)
