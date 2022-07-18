@@ -236,6 +236,15 @@ getRate = lazerpay.getRate('USDT','NGN')
 print("getRate =>")
 print(getRate)
 ```
+#### `Get Accepted Fiats`
+
+This gets the list of accepted fiat on Lazerpay
+
+```python
+getFiats = lazerpay.getFiats()
+print("getFiats =>")
+print(getFiats)
+```
 #### `Creating random string`
 This function creates a random string and takes a single parameter as argument.
 ```python
