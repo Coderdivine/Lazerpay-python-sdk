@@ -26,7 +26,6 @@ The function above takes four parameters
 ##### Current Supported Network
 
 Use TEST API keys for testing, and LIVE API keys for production
-##Lazerpay Methods exposed by the sdk
 
 ## Lazerpay Methods exposed by the sdk
 
