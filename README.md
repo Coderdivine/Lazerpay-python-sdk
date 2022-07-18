@@ -13,7 +13,7 @@ pip install LazerPayFinance
 ```
 If the approach is not working try this
 ```bash
-py -m pip instal LazerPayFinance
+py -m pip install LazerPayFinance
 ```
 ```python
 import LazerPayFinance
