@@ -247,6 +247,8 @@ print("__DONE__")
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
 Please make sure to update tests as appropriate.
-
+## `Example`
+To view a full example on how to use this sdk, click
+[here](https://github.com/Coderdivine/Lazerpay-python-sdk/blob/main/Example.py)
 ## `License`
 [MIT](https://choosealicense.com/licenses/mit/)
