@@ -16,7 +16,7 @@ If the approach is not working try this
 py -m pip install LazerPayFinance
 ```
 ```python
-import LazerPayFinance
+from LazerPayFinance import LazerPayFinance
 lazerpay = LazerPayFinance(LAZER_PUBLIC_KEY, LAZER_SECRET_KEY,True,'Binance Smart Chain')
 ```
 The function above takes four parameters
