@@ -2,7 +2,7 @@
 <img title="Lazerpay" src= "https://res.cloudinary.com/njokuscript/image/upload/v1646279538/lazerpay_logo_no-bg_trkkye.png" width="300px"/>
 </p>
 
-#### The Lazerpay v1 Python SDK
+#### The Lazerpay v1 Python SDK (Unofficial)
 
 ## Installation
 
